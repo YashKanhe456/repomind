@@ -110,7 +110,7 @@ async function generateReport(snapshot: RepoSnapshot, prompt: string): Promise<A
 
 function buildFallbackReport(snapshot: RepoSnapshot): AnalysisReport {
   const report = {
-    summary: `${snapshot.owner}/${snapshot.repo} was scanned from GitHub. RepoMind detected ${snapshot.techStack.join(", ") || "a general codebase"} and sampled ${snapshot.files.length} important files. Add GROQ_API_KEY to generate a deeper AI review.`,
+    summary: `${snapshot.owner}/${snapshot.repo} was scanned from GitHub. GitGuru detected ${snapshot.techStack.join(", ") || "a general codebase"} and sampled ${snapshot.files.length} important files. Add GROQ_API_KEY to generate a deeper AI review.`,
     architecture: [
       "The repository is summarized from its visible file tree and high-signal source files.",
       "Configuration and entry-point files are prioritized before deeper implementation files.",
@@ -121,7 +121,7 @@ function buildFallbackReport(snapshot: RepoSnapshot): AnalysisReport {
       {
         title: "AI review is not configured",
         severity: "medium" as const,
-        explanation: "RepoMind needs a Groq API key before it can generate detailed code findings.",
+        explanation: "GitGuru needs a Groq API key before it can generate detailed code findings.",
         recommendation: "Set GROQ_API_KEY in .env.local and run the analysis again.",
       },
     ],

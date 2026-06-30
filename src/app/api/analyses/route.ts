@@ -6,7 +6,7 @@ export async function GET() {
     const result = await listRecentAnalyses();
     return NextResponse.json(result);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "RepoMind could not load recent analyses.";
+    const message = error instanceof Error ? error.message : "GitGuru could not load recent analyses.";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

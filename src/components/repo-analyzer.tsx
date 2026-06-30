@@ -108,7 +108,7 @@ export function RepoAnalyzer() {
                 <Brain size={22} />
               </div>
               <div>
-                <p className="text-lg font-semibold">RepoMind</p>
+                <p className="text-lg font-semibold">GitGuru</p>
                 <p className="text-sm text-zinc-400">LangGraph code intelligence</p>
               </div>
             </div>
@@ -129,7 +129,7 @@ export function RepoAnalyzer() {
                   Turn any repository into an architecture report, risk radar, and test plan.
                 </h1>
                 <p className="max-w-2xl text-base leading-7 text-zinc-300">
-                  RepoMind scans high-signal files, runs a LangGraph review workflow, asks Groq for
+                  GitGuru scans high-signal files, runs a LangGraph review workflow, asks Groq for
                   engineering analysis, and stores the result in Neon when configured.
                 </p>
               </div>
@@ -247,7 +247,7 @@ function ReportView({ result }: { result: AnalysisResult }) {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = `repomind-${result.snapshot.owner}-${result.snapshot.repo}.md`;
+    link.download = `gitguru-${result.snapshot.owner}-${result.snapshot.repo}.md`;
     document.body.appendChild(link);
     link.click();
     link.remove();

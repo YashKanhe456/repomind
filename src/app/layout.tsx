@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RepoMind",
+  title: "GitGuru",
   description: "AI-powered codebase intelligence for GitHub repositories.",
 };
 

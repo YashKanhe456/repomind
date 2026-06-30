@@ -33,7 +33,7 @@ export async function GET(_request: NextRequest, context: RouteContext) {
       report,
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "RepoMind could not load this analysis.";
+    const message = error instanceof Error ? error.message : "GitGuru could not load this analysis.";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 }

@@ -14,7 +14,7 @@ ${file.content}
     .join("\n");
 
   return `
-You are RepoMind, a senior software engineering reviewer.
+You are GitGuru, a senior software engineering reviewer.
 
 Analyze this GitHub repository for a concise recruiter-facing code intelligence report.
 Be specific, practical, and avoid inventing files that are not present. Keep each item short.
@@ -66,7 +66,7 @@ export function reportToMarkdown(snapshot: RepoSnapshot, report: Omit<AnalysisRe
     .map((test) => `- **${test.title}** (${test.target}): ${test.reason}`)
     .join("\n");
 
-  return `# RepoMind Report: ${snapshot.owner}/${snapshot.repo}
+  return `# GitGuru Report: ${snapshot.owner}/${snapshot.repo}
 
 ## Summary
 ${report.summary}

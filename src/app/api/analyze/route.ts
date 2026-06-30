@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       savedToDatabase: saved.savedToDatabase,
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "RepoMind could not analyze this repository.";
+    const message = error instanceof Error ? error.message : "GitGuru could not analyze this repository.";
 
     return NextResponse.json({ error: message }, { status: 400 });
   }

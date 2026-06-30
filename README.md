@@ -1,8 +1,8 @@
-# RepoMind
+# GitGuru
 
 AI-powered codebase intelligence for GitHub repositories.
 
-RepoMind turns a GitHub repository URL into a focused engineering report. It scans high-signal files, runs a LangGraph workflow, uses Groq for code analysis, and stores reports in Neon Postgres when configured.
+GitGuru turns a GitHub repository URL into a focused engineering report. It scans high-signal files, runs a LangGraph workflow, uses Groq for code analysis, and stores reports in Neon Postgres when configured.
 
 ## Features
 
@@ -44,7 +44,7 @@ DATABASE_URL=
 GITHUB_TOKEN=
 ```
 
-`GROQ_API_KEY` enables real AI reports. Without it, RepoMind returns a fallback report so the app does not crash.
+`GROQ_API_KEY` enables real AI reports. Without it, GitGuru returns a fallback report so the app does not crash.
 
 `DATABASE_URL` enables Neon history. Run `drizzle.sql` in the Neon SQL editor before saving reports.
 
@@ -63,7 +63,7 @@ It creates the `analyses` table used for saved report history.
 ## MVP Flow
 
 1. Paste a GitHub repository URL.
-2. RepoMind fetches the repository tree and focused source files.
+2. GitGuru fetches the repository tree and focused source files.
 3. LangGraph coordinates scan, prompt, and report generation.
 4. Groq returns a structured engineering report.
 5. Neon saves the report when configured.
@@ -71,7 +71,7 @@ It creates the `analyses` table used for saved report history.
 
 ## Resume Pitch
 
-Built RepoMind, a full-stack AI codebase intelligence app using Next.js, LangGraph, Groq, and Neon Postgres. It analyzes GitHub repositories, generates architecture summaries, detects code risks with severity labels, suggests improvements, creates test plans, saves analysis history, and exports Markdown engineering reports.
+Built GitGuru, a full-stack AI codebase intelligence app using Next.js, LangGraph, Groq, and Neon Postgres. It analyzes GitHub repositories, generates architecture summaries, detects code risks with severity labels, suggests improvements, creates test plans, saves analysis history, and exports Markdown engineering reports.
 
 ## Validation
 
